@@ -43,7 +43,7 @@ module Prawn
                     :DA => PDF::Core::LiteralString.new("/Helv 0 Tf 0 g"),
                     :F => 4,
                     :Ff => flags_from_options(opts),
-                    :BS => {:Type => :Border, :W => 1, :S => :S},
+                    :BS => {:Type => :Border, :W => opts[:border_width] || 1, :S => :S},
                     :MK => {:BC => [0, 0, 0]},
                     :Rect => [x, y, x + w, y - h]}
 
